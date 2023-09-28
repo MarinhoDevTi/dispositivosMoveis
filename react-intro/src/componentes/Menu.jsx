@@ -1,6 +1,4 @@
-// Menu.jsx
 export default function Menu () {
-
     return (
         <div className="menu">
             <a href="#">Home</a>

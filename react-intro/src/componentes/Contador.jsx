@@ -1,38 +1,34 @@
-// Contador.jsx
-
 import { useEffect, useState } from "react";
 
 export default function Contador({ inicial }) {
     let numero = inicial;
-    const [cont, setCont] = useState(inicial);
+    const [cont, setCont] = useState(inicial); // setCont permite mudar a variavel
     const [saldo, setSaldo] = useState("POSITIVO");
 
-    // Efeito Colateral
+    // Efeito Colateral 
     useEffect(() => {
         // O que vai acontecer
-        //console.log("MUDOU O CONT:" + cont)
-        if ( cont >= 0 ){
+        if (cont >= 0) {
             setSaldo("POSITIVO");
         } else {
             setSaldo("NEGATIVO");
         }
-
-    }, [cont]); //<- Quem vai Disparar
+    }, [cont]); // <- Quem vai disparar
 
     function aumentar() {
-        numero = numero + 1;
+        numero = numero + 1
         console.log("Aumentou:", numero);
-        setCont(cont + 1);
-        alert(cont);
+        setCont(cont + 1)
     }
 
     function diminuir() {
-        numero = numero - 1;
+        numero = numero -1
         console.log("Diminuiu:", numero);
         setCont(cont - 1);
     }
 
     return (
+
         <div>
             Número: {numero} <br />
             Contador: {cont} <br />
@@ -41,5 +37,6 @@ export default function Contador({ inicial }) {
             <button onClick={aumentar}>Aumentar</button>
             <button onClick={diminuir}>Diminuir</button>
         </div>
+        
     )
 }

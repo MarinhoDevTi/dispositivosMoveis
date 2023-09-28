@@ -1,4 +1,3 @@
-// Rodape.jsx
 export default function Rodape() {
 
     return (
